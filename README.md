@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Start
 
-Run `npm install` to install all requirements client repo to intall angular project requirements
+Run `npm install` in front-end repo to intall angular project requirements
 
 ## Development Spring boot
 
@@ -12,7 +12,7 @@ Run corner store spring boot server for.default port: `http://localhost:8015/`.
 
 ## Development Client server
 
-Run `npm server`. Navigate to `http://localhost:4200/`. server changes will automatically reload in the in the browser
+Run `ng serve`. Navigate to `http://localhost:4200/`. server changes will automatically reload in the in the browser
 
 ## For dev
 
