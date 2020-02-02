@@ -1,0 +1,32 @@
+.slide-text{
+    position: absolute !important;
+    top: 20%;
+    z-index: 99;
+    span{
+        color: #e7ab3c;
+        font-weight: 600;
+    }
+    a{
+        position: relative;
+        z-index: 101 !important;
+    }
+}
+
+.ship-btn{
+    background-color: #e7ab3c;
+    border-radius: 0% !important;
+}
+
+.left-arrow, .right-arrow{
+    position: absolute !important;
+     top: 50%;
+     z-index: 100;
+     font-size: 20px;
+}
+.left-arrow{
+    left: 50px;
+}
+.right-arrow{
+    right: 50px;
+}
+

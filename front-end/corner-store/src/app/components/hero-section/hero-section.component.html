@@ -1,0 +1,46 @@
+<!-- <ngb-carousel *ngIf="images" interval="4000" pauseOnHover="true">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel> -->
+<div class="position-relative">
+    
+    <owl-carousel-o [options]="customOptions" #owlCar>
+
+        <ng-container *ngFor="let slide of slidesStore">
+            <ng-template carouselSlide id="{{slide.id.toString}}" class="position-relative">
+                <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 slide-text">
+                            <span>Bag,{{slide.gender}}</span>
+                            <h1>Black friday</h1>
+                            <h4>{{slide.title}}</h4>
+                            <a href="#" class="primary-btn mt-3">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-container>
+
+    </owl-carousel-o>
+        <i class="fa fa-chevron-left ml-5 left-arrow" aria-hidden="true" (click)="owlCar.prev()"></i>
+        <i class="fa fa-chevron-right mr-5 right-arrow" aria-hidden="true" (click)="owlCar.next()"></i>
+</div>
+
+<app-banner></app-banner>

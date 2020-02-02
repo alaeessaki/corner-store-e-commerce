@@ -1,0 +1,48 @@
+<!-- Women Banner Section Begin -->
+<section class="man-banner spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 position-relative mr-5">
+
+                <div class="filter-control">
+                    <ul>
+                        <li class="active">Clothings</li>
+                        <li>HandBag</li>
+                        <li>Shoes</li>
+                        <li>Accessories</li>
+                    </ul>
+                </div>
+
+                <owl-carousel-o [options]="customOptions" #owlCar>
+
+                    <ng-container *ngFor="let slide of slidesStore">
+                        <ng-template carouselSlide id="{{slide.id.toString}}" class="position-relative">
+                            <img [src]="slide.src" [title]="slide.title">
+                            <div class="pi-text">
+                                <div class="catagory-name">{{slide.category}}</div>
+                                <a href="#">
+                                    <h5>{{slide.title}}</h5>
+                                </a>
+                                <div class="product-price">
+                                    {{slide.price}}
+                                    <span>{{slide.old_price}}</span>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+                <i class="fa fa-chevron-left ml-5 left-arrow" aria-hidden="true" (click)="owlCar.prev()"></i>
+                <i class="fa fa-chevron-right mr-5 right-arrow" aria-hidden="true" (click)="owlCar.next()"></i>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="product-large set-bg ml-5">
+                    <h2>Men's</h2>
+                    <a href="#">Discover More</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Women Banner Section End -->

@@ -1,0 +1,137 @@
+/*---------------------
+  Women Banner Section
+-----------------------*/
+
+.women-banner {
+  padding-right: 65px;
+  padding-left: 65px;
+  padding-top: 0;
+  padding-bottom: 80px;
+}
+
+.product-large {
+  height: 620px;
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+  padding-top: 285px;
+}
+
+.product-large h2 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.product-large a {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+}
+
+.product-large a:before {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  content: "";
+}
+
+.set-bg {
+  background-image: url("../../../assets/img/products/women-large.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.filter-control {
+  text-align: center;
+  margin-bottom: 45px;
+  padding-top: 32px;
+}
+
+.filter-control ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  color: #b2b2b2;
+  margin-right: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.filter-control ul li.active {
+  color: #171717;
+}
+
+.filter-control ul li.active:before {
+  opacity: 1;
+}
+
+.filter-control ul li:before {
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #171717;
+  content: "";
+  opacity: 0;
+}
+
+.filter-control ul li:last-child {
+  margin-right: 0;
+}
+
+
+
+.pi-text {
+  text-align: center;
+  padding-top: 26px;
+
+  .catagory-name {
+    font-size: 10px;
+    color: #b2b2b2;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  a {
+    display: block;
+    h5 {
+        color: #252525;
+      }
+  }
+  .product-price {
+    color: #e7ab3c;
+    font-size: 20px;
+    font-weight: 700;
+    span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #b2b2b2;
+        text-decoration: line-through;
+      }
+      
+  }
+}
+
+
+.left-arrow, .right-arrow{
+    position: absolute !important;
+     top: 45%;
+     z-index: 100;
+     font-size: 20px;
+}
+.left-arrow{
+    left: -80px;
+}
+.right-arrow{
+    right: -80px;
+}
+
