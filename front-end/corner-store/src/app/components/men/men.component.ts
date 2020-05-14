@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Product } from 'src/app/Models/Product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-men',
@@ -29,44 +31,17 @@ export class MenComponent implements OnInit {
     navText: ["", ""]
   };
 
-  slidesStore = [
-    {
-      id: 1,
-      title: "first title image",
-      src: "../../../assets/img/products/man-1.jpg",
-      category: "first image",
-      price: "30$",
-      old_price:"40$"
-    },
-    {
-      id: 2,
-      title: "first title image",
-      src: "../../../assets/img/products/man-2.jpg",
-      category: "first image",
-      price: "40$",
-      old_price:"50$"
-    },
-    {
-      id: 3,
-      title: "first title image",
-      src: "../../../assets/img/products/man-3.jpg",
-      category: "first image",
-      price: "10$",
-      old_price:"20$"
-    },
-    {
-      id: 4,
-      title: "first title image",
-      src: "../../../assets/img/products/man-4.jpg",
-      category: "first image",
-      price: "100$",
-      old_price:"220$"
-    }
-  ];
+  slidesStore:Product[];
 
-  constructor() { }
+  constructor(private productService:ProductService) { }
 
   ngOnInit() {
+    this.productService.getAll().subscribe(
+      products =>{
+        this.slidesStore = products;
+      } 
+    )
+      
   }
 
 }

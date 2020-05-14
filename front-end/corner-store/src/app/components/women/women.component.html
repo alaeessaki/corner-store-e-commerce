@@ -22,15 +22,15 @@
                 <owl-carousel-o [options]="customOptions" #owlCar>
                     <ng-container *ngFor="let slide of slidesStore" >
                         <ng-template carouselSlide id="{{slide.id.toString}}" class="position-relative">
-                            <img [src]="slide.src" [title]="slide.title">
+                            <img [src]="slide.images[0].src" [title]="slide.name">
                             <div class="pi-text">
-                                <div class="catagory-name">{{slide.category}}</div>
+                                <div class="catagory-name">{{slide.category.label}}</div>
                                 <a href="#">
-                                    <h5>{{slide.title}}</h5>
+                                    <h5>{{slide.name}}</h5>
                                 </a>
                                 <div class="product-price">
                                     {{slide.price}}
-                                    <span>{{slide.old_price}}</span>
+                                    <span>{{slide.price - 10}}</span>
                                 </div>
                             </div>
                         </ng-template>
