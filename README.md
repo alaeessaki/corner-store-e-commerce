@@ -19,6 +19,25 @@ Run `ng serve`. Navigate to `http://localhost:4200/`. server changes will automa
 font-end folder is the Angular Project
 back-end folder is the Spring boot 
 
+## Back end fonctionnalities :
+
+- Jwt Authentification.
+- Roles security management.
+- Coupons system.
+- Reviews System.
+- Products ranking system.
+- Swagger documentation.
+- Exceprtions handling.
+
+## Front end fonctionnalities :
+
+- Angular routing.
+- Authentifcation system.
+- Route guard.
+- Interceptors.
+- Products CRUD operations.
+- Categories CRUD operations.
+
 ## Preview:
 
 ![preview](preview.PNG)
